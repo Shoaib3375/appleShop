@@ -30,7 +30,6 @@
         let searchParams=new URLSearchParams(window.location.search);
         let id=searchParams.get('id');
 
-
         let res=await axios.get(`/ListProductByCategory/${id}`);
         $("#byCategoryList").empty();
         res.data['data'].forEach((item,i)=>{
