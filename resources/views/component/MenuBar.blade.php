@@ -26,7 +26,7 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg">
                 <a class="navbar-brand" href="{{url("/")}}">
-                    <img class="logo_dark" src="assets/images/imgu.jpg" alt="logo" />
+                    <img class="logo_dark" src="assets/images/logo2.jpg" alt="logo" />
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-expanded="false">
                     <span class="ion-android-menu"></span>
