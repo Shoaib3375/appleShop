@@ -62,7 +62,7 @@
                             </div>`
             $("#byBrandList").append(EachItem);
 
-            $("#BrandName").text( res.data['data'][0]['brand']['BrandName']);
+            $("#BrandName").text( res.data['data'][0]['brand']['brandName']);
 
 
         })
