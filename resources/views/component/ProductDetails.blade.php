@@ -32,36 +32,36 @@
                     <div>
                         <p id="p_des"></p>
                     </div>
-                </div>
+                    </div>
 
 
-                <label class="form-label">Size</label>
-                <select id="p_size" class="form-select">
-                </select>
+                    <label class="form-label">Size</label>
+                    <select id="p_size" class="form-select">
+                    </select>
 
-                <label class="form-label">Color</label>
-                <select id="p_color" class="form-select">
+                    <label class="form-label">Color</label>
+                    <select id="p_color" class="form-select">
 
-                </select>
+                    </select>
 
-                <hr />
-                <div class="cart_extra">
-                    <div class="cart-product-quantity">
-                        <div class="quantity">
-                            <input type="button" value="-" class="minus">
-                            <input id="p_qty" type="text" name="quantity" value="1" title="Qty" class="qty" size="4">
-                            <input type="button" value="+" class="plus">
+                    <hr />
+                    <div class="cart_extra">
+                        <div class="cart-product-quantity">
+                            <div class="quantity">
+                                <input type="button" value="-" class="minus">
+                                <input id="p_qty" type="text" name="quantity" value="1" title="Qty" class="qty" size="4">
+                                <input type="button" value="+" class="plus">
+                            </div>
+                        </div>
+                        <div class="cart_btn">
+                            <button onclick="AddToCart()" class="btn btn-fill-out btn-addtocart" type="button"><i class="icon-basket-loaded"></i> Add to cart</button>
+                            <a class="add_wishlist" onclick="AddToWishList()" href="#"><i class="icon-heart"></i></a>
                         </div>
                     </div>
-                    <div class="cart_btn">
-                        <button onclick="AddToCart()" class="btn btn-fill-out btn-addtocart" type="button"><i class="icon-basket-loaded"></i> Add to cart</button>
-                        <a class="add_wishlist" onclick="AddToWishList()" href="#"><i class="icon-heart"></i></a>
-                    </div>
+                    <hr />
                 </div>
-                <hr />
             </div>
         </div>
-    </div>
 </div>
 
 
@@ -135,24 +135,24 @@
 
 
 
-    async function ProductReview() {
-        let res = await axios.get("/ListReviewByProduct/" + id);
-        let Details = await res.data['data'];
+    async function productReview(){
+        let res = await axios.get("/ListReviewByProduct/"+id);
+        let Details=await res.data['data'];
 
         $("#reviewList").empty();
 
-        Details.forEach((item, i) => {
-            let each = `<li class="list-group-item">
-            <h6>${item['profile']['cus_name']}</h6>
-            <p class="m-0 p-0">${item['description']}</p>
-            <div class="rating_wrap">
-                <div class="rating">
-                    <div class="product_rate" style="width:${parseFloat(item['rating'])}%"></div>
+        Details.forEach((item,i)=>{
+            let each= `<li class="list-group-item">
+                <h6>${item['profile']['cus_name']}</h6>
+                <p class="m-0 p-0">${item['description']}</p>
+                <div class="rating_wrap">
+                    <div class="rating">
+                        <div class="product_rate" style="width:${parseFloat(item['rating'])}%"></div>
+                    </div>
                 </div>
-            </div>
-        </li>`;
-            $("#reviewList").append(each);
-        });
+            </li>`;
+           $("#reviewList").append(each);
+        })
     }
 
     async function AddToCart() {
