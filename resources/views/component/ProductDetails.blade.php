@@ -97,8 +97,7 @@
 
         document.getElementById('p_title').innerText=Details[0]['product']['title'];
         document.getElementById('p_price').innerText=`$ ${Details[0]['product']['price']}`;
-        document.getElementById('p_des').innerText=Details[0]['product']['short_des'];
-        document.getElementById('p_details').innerHTML=Details[0]['des'];
+        document.getElementById('p_des').innerText=Details[0]['des'];
 
         // Product Size & Color
         let size= Details[0]['size'].split(',');
