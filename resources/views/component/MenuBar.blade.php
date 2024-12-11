@@ -52,7 +52,6 @@
                             </div>
                         </li>
                         <li><a class="nav-link nav_item" href="{{url("/wish")}}"><i class="ti-heart"></i> Wish</a></li>
-
                         <li><a class="nav-link nav_item" href="{{url("/cart")}}"><i class="linearicons-cart"></i> Cart </a></li>
                         <li><a href="javascript:void(0);" class="nav-link search_trigger"><i class="linearicons-magnifier"></i> Search</a>
                             <div class="search_wrap">
